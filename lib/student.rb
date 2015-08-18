@@ -90,7 +90,7 @@ class Student
       WHERE id=?
     SQL
 
-    results = DB[:conn].execute(update_student, name, tagline, github, twitter, blog_url, image_url, biography, id)
+    results = DB[:conn].execute(update_student, attributes, id)
   end
 
   def persisted?
